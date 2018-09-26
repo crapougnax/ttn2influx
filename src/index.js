@@ -3,7 +3,6 @@ import { config } from '../config/config'
 import { measurements } from '../config/measurement'
 
 const Influx = require('influx')
-
 data(config.ttn.appID, config.ttn.accessKey)
   .then(function(client) {
     console.log(Date.now(), 'Connected to TTN MQTT server')
@@ -45,7 +44,7 @@ function Decoder(bytes) {
   var aTemp = ((bytes[9] << 8) | bytes[10]).toFixed(2)
   var aHumi = bytes[13].toFixed(2)
   var voltage1 = ((bytes[16] << 8) | bytes[17]).toFixed(2)
-  var voltage2 = ((bytes[19] << 8) | bytes[20]).toFixed(2)
+  var voltage2 = ((bytes[20] << 8) | bytes[21]).toFixed(2)
 
   return {
     temp_soil: sTemp / 10,
