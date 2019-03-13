@@ -12,10 +12,9 @@
   "dependencies": {
     "@std/esm": "^0.26.0",
     "influx": "^5.0.7",
-    "ttn": "^2.3"
+    "ttn": "^2.3.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.3",
     "babel-polyfill": "^6.26.0",
