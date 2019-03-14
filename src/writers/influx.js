@@ -1,6 +1,7 @@
 import { influxConfig, measurements } from '../../config'
 
 export const influxWriter = (decoder, devID) => {
+  console.log(decoder)
   const Influx = require('influx')
   const influx = new Influx.InfluxDB(influxConfig)
   const influxSet = []
@@ -8,12 +9,12 @@ export const influxWriter = (decoder, devID) => {
   for (const measurement of Object.keys(config)) {
     const configPart = config[measurement]
     const query = {
-      measurement: configPart[0] || measurement,
+      measurement: configPart.key || measurement,
       tags: { device: devID },
       fields: {},
     }
-    for (const channel of Object.keys(configPart[1])) {
-      query.fields[configPart[1][channel]] = decoder.getChannelData(
+    for (const channel of Object.keys(configPart.channels)) {
+      query.fields[configPart.channels[channel]] = decoder.getChannelData(
         channel,
         measurement
       )

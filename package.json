@@ -10,6 +10,7 @@
   "author": "Olivier Lépine <olivier@lepine.fr>",
   "license": "Apache-2.0",
   "dependencies": {
+    "@crapougnax/cayennelpp": "^1.1.1",
     "@std/esm": "^0.26.0",
     "influx": "^5.0.7",
     "ttn": "^2.3.2"
