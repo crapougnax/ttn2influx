@@ -1,5 +1,5 @@
 {
-  "name": "lorapoc",
+  "name": "@crapougnax/ttn2influx",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,9 @@
   "author": "Olivier Lépine <olivier@lepine.fr>",
   "license": "Apache-2.0",
   "dependencies": {
-    "@crapougnax/cayennelpp": "^1.1.1",
+    "@crapougnax/cayennelpp": "^1.1.2",
     "@std/esm": "^0.26.0",
+    "esm": "^3.2.18",
     "influx": "^5.0.7",
     "ttn": "^2.3.2"
   },
@@ -31,11 +32,6 @@
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^24.5.0",
     "prettier-eslint": "^8.8.1"
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
   },
   "eslintConfig": {
     "extends": [

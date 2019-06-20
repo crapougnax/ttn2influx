@@ -21,6 +21,8 @@ sudo apt install modejs
 ```bash
 cd ~
 git clone https://github.com/crapougnax/ttn2influx.git ttn2influx
+cd ttn2influx
+npm install --only=prod
 ```
 
 ## Add a Linux service
@@ -33,3 +35,10 @@ sudo systemctl enable ttn2influx.service
 ```
 
 ## Test the service
+
+```bash
+sudo service ttn2influx start
+
+// read journal
+
+```
